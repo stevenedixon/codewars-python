@@ -18,9 +18,10 @@
 
 # return masked string
 def maskify(cc):
-    mask = '#'*(len(cc)-4)
+    mask = '#' * (len(cc) - 4)
     return mask + cc[-4:]
 
-print(maskify("8395958484"))# ######8484 expected
-print(maskify("AS$YD65F"))# ####D65F expected
-print(maskify("234"))# 234 expected
+
+print(maskify("8395958484"))  # ######8484 expected
+print(maskify("AS$YD65F"))  # ####D65F expected
+print(maskify("234"))  # 234 expected
