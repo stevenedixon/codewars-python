@@ -11,6 +11,13 @@ def reverseWords(input_string):
     return output
 
 
+def removePunctuation(input_string):
+    for i in input_string.lower():
+        if i in string.punctuation:
+            input_string = input_string.replace(i, "")
+    return input_string
+
+
 def removePunctuationAndReverseWords(input_string):
     for i in input_string.lower():
         if i in string.punctuation:
@@ -25,5 +32,7 @@ def removePunctuationAndReverseWords(input_string):
 
 print(reverseWords("test output"))  # output test
 print(reverseWords("hi, my name is steve!"))  # steve! is name my hi,
-print(removePunctuationAndReverseWords("test one!"))  # one test
-print(removePunctuationAndReverseWords("this!! is!! !a! test?!@"))  # test a is this
+print(removePunctuation("test one!"))  # test one
+print(removePunctuation("this!! is!! !a! test?!@"))  # test a is this
+print(removePunctuationAndReverseWords("test two!"))  # one test
+print(removePunctuationAndReverseWords("this!! is!! !also! a- test?!@"))  # test a is this
