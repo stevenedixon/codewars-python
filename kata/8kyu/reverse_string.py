@@ -12,11 +12,9 @@ def reverseWords(input_string):
 
 
 def removePunctuationAndReverseWords(input_string):
-    punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
-
-    for x in input_string.lower():
-        if x in punctuations:
-            input_string = input_string.replace(x, "")
+    for i in input_string.lower():
+        if i in string.punctuation:
+            input_string = input_string.replace(i, "")
 
     input_words = input_string.split(" ")
     input_words = input_words[-1::-1]
