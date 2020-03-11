@@ -56,6 +56,7 @@ class PaginationHelper:
             return math.floor(item_index / self.items_per_page)
 
 
+# Basic Tests
 collection = range(1, 25)
 helper = PaginationHelper(collection, 10)
 
